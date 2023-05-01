@@ -10,9 +10,8 @@ export default function Home() {
     >
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
       
-      <p> Testing this build on aws amplify</p>
-      <p> Update: Adding this line, to propegate changes</p>
-      <p className='bg-gray-300'> Update: commiting changes, using aws amplify to host this website</p>
+    <p className='bg-gray-100 text-3xl'>This is the dev environment for fazencode</p>
+      
       </div>
     </main>
   )
