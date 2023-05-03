@@ -11,6 +11,10 @@ export default function Home() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
       
     <p className='bg-gray-100 text-3xl'>This is the dev environment for fazencode</p>
+    
+    <form>
+      <input>Text Here:</input>
+    </form>
       
       </div>
     </main>
