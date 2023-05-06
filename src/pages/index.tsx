@@ -1,22 +1,54 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import MapleBoard from '../images/MapleBoard.png';
+import roughboard from '../images/roughboard.png';
+
+interface CardProps {
+  title: string;
+  description: string;
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+// const Maple = MapleBoard.src;
+
+const Maple = roughboard.src;
+
+export default function Home({ title, description }: CardProps) {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-      
-    <p className='bg-gray-100 text-3xl'>This is the dev environment for fazencode</p>
+    <main>
+<p className='bg-gray-600 text-white text-3xl p-6 m-6 rounded-lg text-center'>test environment on devE branch</p>
+
+
+
+<div>
+     
+      <article className=''>
+     
+
+  <div className="p-10 sm:space-x-4 sm:flex">
     
-    <form>
-      <input>Text Here:</input>
-    </form>
-      
+      <span className=' '>
+      </span>
+        <img  src={Maple} alt="My Image" className=" sm:w-80 sm:h-80  "/>
+        <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   "/>
+        <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   "/>
+        <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   "/>
+        <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   "/>
+  </div>
+    
+      </article>
+   
       </div>
+
+
+
+
+     
+
+    
     </main>
+
+    
   )
 }
