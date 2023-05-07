@@ -26,7 +26,7 @@ export default function Home({ title, description }: CardProps) {
       <article className=''>
      
 
-  <div className="p-10 sm:space-x-4 sm:flex">
+  <div className="p-10 sm:space-x-4 ">
     
       <span className=' '>
       </span>
