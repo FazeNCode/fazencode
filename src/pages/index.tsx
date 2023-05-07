@@ -13,6 +13,7 @@ export default function Home() {
       <p> Testing this build on aws amplify</p>
       <p> Update: Adding this line, to propegate changes</p>
       <p className='bg-gray-300'> Update: commiting changes, using aws amplify to host this website</p>
+      <p className='bg-gray-300'> Update check</p>
       </div>
     </main>
   )
