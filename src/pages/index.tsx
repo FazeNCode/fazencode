@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Navigation_Comp from './components/Navigation_Comp'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,13 +9,12 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+
+      <Navigation_Comp/>
       
-      <p> Testing this build on aws amplify</p>
-      <p> Update: Adding this line, to propegate changes</p>
-      <p className='bg-gray-300'> Update: commiting changes, using aws amplify to host this website</p>
-      <p className='bg-gray-300'> Update check</p>
-      </div>
+      
+     
+ 
     </main>
   )
 }
