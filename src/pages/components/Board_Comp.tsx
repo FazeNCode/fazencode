@@ -5,50 +5,190 @@ const Maple = roughboard.src;
 // Board colors 9E6144 , 8A4525
 function Board_Comp() {
   return (
-    <div>
-      <div className=" mx-8 sm:mx-2 md:mx-2  ">
-        <div className=" max-w-[1240px] py-1 mx-auto grid md:grid-cols-3 sm:grid-cols-3  ">
-          <div className=" bg-gray-400 sm:mx-0 md:mx-2 lg:mx-10 py-1 my-0 flex flex-col justify-center items-center rounded-2xl drop-shadow-md hover:scale-105 duration-500  ">
-            <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   " />
-            <h2 className="bg-gray-500 text-4xl my-2 text-white font-bold">
-              Header One
-            </h2>
-            <div className="bg-gray-500 text-white w-full text-center p-8 "></div>
-            <button className="hover:from-teal-600 hover:to-yellow-100 text-3xl text-white bg-gradient-to-br from-orange-700 to-yellow-100 my-8 rounded-lg p-2 w-[20rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]">
+    <div className="max-w-[1920px] mx-auto ">
+      {/* Main container */}
+      <div className=" mx-4 my-20 sm:mx-0 md:mx-4 ">
+        {/* Container for board cards */}
+        <div className=" max-w-[1780px] py-1 mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
+
+          {/* <button className=" hover:from-teal-600 hover:to-yellow-100 text-1xl 
+            black bg-gradient-to-br from-orange-100 to-yellow-100 my rounded-lg p-1 w-[10rem] sm:w-[10rem] md:w-[2rem] lg:w-[6rem]">
               {" "}
               Test
-            </button>
-          </div>
+            </button> */}
 
-          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-10 py-6 my-8 flex flex-col justify-center items-center rounded-2xl drop-shadow-md hover:scale-105 duration-500 ">
-            <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80 " />
-            <h2 className="bg-transparent text-4xl my-2 text-white font-bold">
-              Header Two
-            </h2>
-            <div className="bg-transparent text-white w-full text-center p-8 "></div>
-            <button className=" hover:from-teal-600 hover:to-yellow-100 text-3xl text-white bg-gradient-to-br from-orange-700 to-yellow-100 my-8 rounded-lg p-2 w-[20rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]">
-              {" "}
-              Test
-            </button>
-          </div>
 
-          <div className=" bg-gray-300 sm:mx-0 md:mx-2 lg:mx-10 py-6 my-8 flex flex-col justify-center items-center rounded-2xl drop-shadow-md hover:scale-105 duration-500  ">
-            <img src={Maple} alt="My Image" className=" sm:w-80 sm:h-80   " />
-            <h2 className=" bg-gray-500 text-4xl my-2 text-white font-bold">
-              Header Three
-            </h2>
-            <div className=" bg-gray-500 text-white w-full text-center p-8 ">
-              {/* <p className=' bg-gray-500  text-4xl text-white font-bold'>$199</p>
-                    <p className=" bg-gray-500 border-b border-b-gray-300 py-2 mx-0 mt-8  ">Test</p>
-                    <p className=" bg-gray-500 border-b border-b-gray-300 py-2 mx-0  ">3 Users Allowed</p>
-                    <p className=" bg-gray-500 border-b border-b-gray-300 py-2 mx-0">Send up to 20GB</p> */}
+
+
+
+          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-2 py-6 my-8 flex flex-col  items-center rounded-2xl drop-shadow-md ">
+            
+            <div className=" bg-gray-700 sm:mx-2 md:mx-2 lg:mx-4 py-2 mx-auto rounded-xl drop-shadow-lg">
+              <img
+                src={Maple}
+                alt="My Image"
+                className=" sm:w-80 sm:h-80 hover:scale-105 duration-500 bg-transparent rounded-xl "
+              />
             </div>
-            <button className=" hover:from-teal-600 hover:to-yellow-100 text-3xl text-white bg-gradient-to-br from-orange-700 to-yellow-100 my-8 rounded-lg p-2 w-[20rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]">
-              {" "}
-              Test
-            </button>
+
+
+
+            <div className=" bg-transparent w-full p-2 ">
+              <div className="w-full bg-transparent my-1">
+                <span>in/container</span> <span>in/container</span>
+              </div>
+
+              <div className="my-2 p-1">How to SSH</div>
+
+              <div className="my-4 p-4 ">
+                SSH is a well known method to seccurely access..
+              </div>
+
+              <div className="my-4 space-x-40 ">
+                <span>Published date </span>
+                <span className="">
+                  <button>Read more</button>
+                </span>
+              </div>
+            </div>
+
+
+
+
           </div>
+
+
+
+
+
+
+
+          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-2 py-6 my-8 flex flex-col  items-center rounded-2xl drop-shadow-md ">
+            <div className=" bg-transparent sm:mx-2 md:mx-2 lg:mx-4 py-10 flex justify-center rounded-2xl drop-shadow-md ">
+              <img
+                src={Maple}
+                alt="My Image"
+                className=" sm:w-80 sm:h-80 hover:scale-105 duration-500 bg-transparent rounded-xl "
+              />
+            </div>
+
+            <div className=" bg-transparent w-full p-2 ">
+              <div className="w-full bg-transparent my-1">
+                <span>in/container</span> <span>in/container</span>
+              </div>
+
+              <div className="my-2 p-1">How to SSH</div>
+
+              <div className="my-4 p-4 ">
+                SSH is a well known method to seccurely access..
+              </div>
+
+              <div className="my-4 flex ">
+                <span>Published date </span>
+                <span>
+                  {" "}
+                  <button>Read more</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-2 py-6 my-8 flex flex-col  items-center rounded-2xl drop-shadow-md ">
+            <div className=" bg-transparent sm:mx-2 md:mx-2 lg:mx-4 py-10 flex justify-center rounded-2xl drop-shadow-md ">
+              <img
+                src={Maple}
+                alt="My Image"
+                className=" sm:w-80 sm:h-80 hover:scale-105 duration-500 bg-transparent rounded-xl "
+              />
+            </div>
+
+            <div className=" bg-transparent w-full p-2 ">
+              <div className="w-full bg-transparent my-1">
+                <span>in/container</span> <span>in/container</span>
+              </div>
+
+              <div className="my-2 p-1">How to SSH</div>
+
+              <div className="my-4 p-4 ">
+                SSH is a well known method to seccurely access..
+              </div>
+
+              <div className="my-4 flex ">
+                <span>Published date </span>
+                <span>
+                  {" "}
+                  <button>Read more</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-2 py-6 my-8 flex flex-col  items-center rounded-2xl drop-shadow-md ">
+            <div className=" bg-transparent sm:mx-2 md:mx-2 lg:mx-4 py-10 flex justify-center rounded-2xl drop-shadow-md ">
+              <img
+                src={Maple}
+                alt="My Image"
+                className=" sm:w-80 sm:h-80 hover:scale-105 duration-500 bg-transparent rounded-xl "
+              />
+            </div>
+
+            <div className=" bg-transparent w-full p-2 ">
+              <div className="w-full bg-transparent my-1">
+                <span>in/container</span> <span>in/container</span>
+              </div>
+
+              <div className="my-2 p-1">How to SSH</div>
+
+              <div className="my-4 p-4 ">
+                SSH is a well known method to seccurely access..
+              </div>
+
+              <div className="my-4 flex ">
+                <span>Published date </span>
+                <span>
+                  {" "}
+                  <button>Read more</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div className=" bg-gray-500 sm:mx-2 md:mx-2 lg:mx-2 py-6 my-8 flex flex-col  items-center rounded-2xl drop-shadow-md ">
+            <div className=" bg-transparent sm:mx-2 md:mx-2 lg:mx-4 py-10 flex justify-center rounded-2xl drop-shadow-md ">
+              <img
+                src={Maple}
+                alt="My Image"
+                className=" sm:w-80 sm:h-80 hover:scale-105 duration-500 bg-transparent rounded-xl "
+              />
+            </div>
+
+            <div className=" bg-transparent w-full p-2 ">
+              <div className="w-full bg-transparent my-1">
+                <span>in/container</span> <span>in/container</span>
+              </div>
+
+              <div className="my-2 p-1">How to SSH</div>
+
+              <div className="my-4 p-4 ">
+                SSH is a well known method to seccurely access..
+              </div>
+
+              <div className="my-4 flex ">
+                <span>Published date </span>
+                <span>
+                  {" "}
+                  <button>Read more</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Container for board cards End */}
         </div>
+
+        {/* Main container End */}
       </div>
     </div>
   );

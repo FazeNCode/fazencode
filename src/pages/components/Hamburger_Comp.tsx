@@ -119,10 +119,13 @@ function Hamburger_Comp() {
   };
 
   return (
-    <div className="relative flex justify-between max-w-[1440px] items-center mx-auto px-1 py-0">
-      <h1 className="text-4xl text-orange-500 font-bold text-center cursor-pointer">
+    <div className="sticky flex justify-between max-w items-center mx-auto px-4 py-4 bg-gray-400  ">
+
+    
+      <h1 className="text-4xl text-orange-500 font-bold text-center cursor-pointer bg-transparent  sticky">
         FNC
       </h1>
+
 
       {/* Header for Desktop Navigation */}
       <ul className="hidden md:flex space-x-4">
@@ -151,7 +154,7 @@ function Hamburger_Comp() {
           />
         ) : (
           <AiOutlineMenu
-            className="top-2 right-1 fixed font-bold text-white bg-transparent z-50"
+            className="top-2 right-1 fixed font-bold text-red-300 bg-transparent z-50"
             size={40}
           />
         )}
@@ -165,16 +168,16 @@ function Hamburger_Comp() {
         >
           <div className="bg-white rounded-lg w-64 p-4">
             <ul className="my-6 uppercase text-center">
-              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest py-2">
+              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest cursor-pointer py-2">
                 Home
               </li>
-              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest py-2">
+              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest cursor-pointer py-2">
                 About
               </li>
-              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest py-2">
+              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest cursor-pointer py-2">
                 Products
               </li>
-              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest py-2">
+              <li className="text-2xl text-gray-600 border-b border-b-gray-500 tracking-widest cursor-pointer py-2">
                 Contact
               </li>
             </ul>
