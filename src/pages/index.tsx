@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Navigation_Comp from './components/Navigation_Comp'
-import Board_Comp from './components/Board_Comp'
-import Hamburger_Comp from './components/Hamburger_Comp'
+
+import Navbar from './components/Navbar'
+import Card from './components/Card'
 
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -10,10 +10,12 @@ import Hamburger_Comp from './components/Hamburger_Comp'
 export default function Home() {
   return (
     <main>
+    <Navbar/>
+    <Card/>
+    
+     
 
-     <Hamburger_Comp/>
-      {/* <Navigation_Comp/> */}
-      <Board_Comp/>
+    
       
       
      

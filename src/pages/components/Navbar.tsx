@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-function Hamburger_Comp() {
+function Navbar() {
   const [nav, setnav] = useState(false);
 
   const handleNav = () => {
@@ -91,7 +91,7 @@ function Hamburger_Comp() {
             </div>
   )
       };
-export default Hamburger_Comp;
+export default Navbar;
   
 
       
