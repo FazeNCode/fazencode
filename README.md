@@ -1,1 +1,1 @@
-Repostiory for a blog website, that contains information on various subjects and topics
+<h3>Blog Site</h3>
