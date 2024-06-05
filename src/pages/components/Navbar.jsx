@@ -9,14 +9,12 @@
 
 // export default Navbar;
 
-
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import { navLinks } from "../constants";
-import { flogo } from "../assets";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { navLinks } from '../constants';
+import { flogo } from '../assets';
 import { Sling as Hamburger } from 'hamburger-react';
-import { styles } from "../components/styles"
+import { styles } from '../components/styles';
 
 const Logo = ({ isScrolling }) => (
   <div className={`flex items-center ${isScrolling ? "opacity-0 transition-all duration-1000" : "opacity-100 transition-all duration-1000"}`}>
@@ -40,12 +38,10 @@ const MobileNav = ({ toggle, setToggle, isScrolling }) => (
   </div>
 );
 
-
-
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
@@ -53,7 +49,9 @@ const Navbar = () => {
       setIsLargeScreen(window.innerWidth >= 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial state
+
+    window.addEventListener('resize', handleResize);
 
     let scrollTimeout;
     const handleScroll = () => {
@@ -65,32 +63,26 @@ const Navbar = () => {
       }, 1000);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center ${
-        isLargeScreen ? "py-5"  : "py-2 "
-      } top-0 z-20 bg-primary transition-all duration-1000 ${
-        (isScrolling || toggle) ? "bg-opacity-0" : "bg-opacity-80"
-      } fixed`}
+      className={`${styles.paddingX} w-full flex items-center ${isLargeScreen ? "py-5" : "py-2"} top-0 z-20 bg-primary transition-all duration-1000 ${(isScrolling || toggle) ? "bg-opacity-0" : "bg-opacity-80"} fixed`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive(" ");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <Logo isScrolling={isScrolling} />
+        <Link href="/" onClick={() => {
+          setActive('');
+          window.scrollTo(0, 0);
+        }}>
+          <div className="flex items-center gap-2 cursor-pointer">
+            <Logo isScrolling={isScrolling} />
+          </div>
         </Link>
         <MobileNav toggle={toggle} setToggle={setToggle} isScrolling={isScrolling} />
 
@@ -101,29 +93,27 @@ const Navbar = () => {
               className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[20px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <Link href={`#${link.id}`}>
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>
 
-        <div
-          className={`${
-            !toggle ? "hidden" : "flex"
-          } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-        >
+        <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
           <ul className="list-none flex justify-end items-start flex-col gap-6">
             {navLinks.map((link) => (
               <li
                 key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary font-poppins font-medium"
-                } hover:text-white text-[20px] cursor-pointer`}
+                className={`${active === link.title ? "text-white" : "text-secondary font-poppins font-medium"} hover:text-white text-[20px] cursor-pointer`}
                 onClick={() => {
                   setToggle(!toggle);
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <Link href={`#${link.id}`}>
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
@@ -132,4 +122,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
