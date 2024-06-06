@@ -4,7 +4,6 @@
 import Navbar from "./components/Navbar";
 
 
-
 // import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
@@ -14,6 +13,7 @@ export default function Home() {
   
    <div>
     <Navbar/>
+
    
    </div>
  

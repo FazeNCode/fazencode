@@ -1,13 +1,5 @@
 
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-blue-600 p-4 text-white">
-    
-//     </nav>
-//   );
-// };
 
-// export default Navbar;
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -84,6 +76,16 @@ const Navbar = () => {
             <Logo isScrolling={isScrolling} />
           </div>
         </Link>
+
+        {/* Search Bar */}
+        <div className="flex-grow mx-4">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full px-4 py-2 rounded-lg bg-gray-200 text-gray-900"
+          />
+        </div>
+
         <MobileNav toggle={toggle} setToggle={setToggle} isScrolling={isScrolling} />
 
         <ul className="list-none hidden md:flex flex-row gap-10">
